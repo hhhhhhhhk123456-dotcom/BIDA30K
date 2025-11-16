@@ -187,8 +187,12 @@
      <h2 class="text-3xl font-bold mb-8" style="color: #10b981;">Liên Hệ Đặt Bàn</h2>
      <div class="grid md:grid-cols-2 gap-6 mb-8">
       <div class="p-6 rounded-xl" style="background-color: #374151;">
-       <p class="text-lg font-semibold mb-2" style="color: #00bfa5;">📞 Điện Thoại</p>
-       <p id="phone-number" class="text-xl" style="color: #00bfa5;">0866040470</p>
+       <p class="text-lg font-semibold mb-2" style="color: #00bfa5;">FACEBOOK</p>
+       <p id="phone-number" class="text-xl" style="color: #00bfa5;">
+         <a href="https://www.facebook.com/profile.php?id=61583335895282&locale=vi_VN" target="_blank" rel="noopener noreferrer" style="color:#9be7cc; text-decoration:underline;">
+           https://www.facebook.com/profile.php?id=61583335895282&locale=vi_VN
+         </a>
+       </p>
       </div>
       <div class="p-6 rounded-xl" style="background-color: #374151;">
        <p class="text-lg font-semibold mb-2" style="color: #00bfa5;">📍 Địa Chỉ</p>
@@ -224,8 +228,8 @@
       promo_2: "game 9 bi chiến thắng nhân viên Miễn phí nước uống khi chơi",
       promo_3: "Tặng combo 1 gói hướng dương và nước ngọt khi chơi được 5 giờ trong ngày",
       promo_4: "Ưu đãi đặc biệt: Giảm 30 phút chơi khi số lần đến quán đủ 7 ngày > 1 tuần",
-       phone_number: "0866040470",
-       address: "Trung Na, Tiên Hội, Đại Từ — gần quán Karaoke Tuấn Phượng",
+       phone_number: '<a href="https://www.facebook.com/profile.php?id=61583335895282&locale=vi_VN" target="_blank" rel="noopener noreferrer">https://www.facebook.com/profile.php?id=61583335895282&locale=vi_VN</a>',
+        address: "Trung Na, Tiên Hội, Đại Từ — gần quán Karaoke Tuấn Phượng",
      
        cta_button: "Đặt Bàn Ngay"
      };
@@ -300,8 +304,9 @@
         promo4El.style.fontSize = `${baseSize * 1.125}px`;
       }
       
-      document.getElementById('phone-number').textContent = config.phone_number || defaultConfig.phone_number;
-      document.getElementById('phone-number').style.fontSize = `${baseSize * 1.25}px`;
+      const phoneEl = document.getElementById('phone-number');
+      phoneEl.innerHTML = config.phone_number || defaultConfig.phone_number;
+      phoneEl.style.fontSize = `${baseSize * 1.25}px`;
       
       document.getElementById('address').textContent = config.address || defaultConfig.address;
       document.getElementById('address').style.fontSize = `${baseSize * 1.25}px`;
